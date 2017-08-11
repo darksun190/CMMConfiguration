@@ -16,6 +16,8 @@ namespace CMMConfiguration
     {
         private void ThisWorkbook_Startup(object sender, System.EventArgs e)
         {
+            OverviewActionsPaneControl1 apc1 = new OverviewActionsPaneControl1();
+            this.ActionsPane.Controls.Add(apc1);
         }
 
         private void ThisWorkbook_Shutdown(object sender, System.EventArgs e)

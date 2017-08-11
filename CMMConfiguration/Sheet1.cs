@@ -16,6 +16,14 @@ namespace CMMConfiguration
     {
         private void Sheet1_Startup(object sender, System.EventArgs e)
         {
+            Variable.VariableChanged += Variable_VariableChanged;
+            
+        }
+
+        private void Variable_VariableChanged(object sender, VariableChangedEventArgs e)
+        {
+            this.get_Range("A1").Value2 = string.Format("{0} - {1}", "Project Overview", Variable.Project_Name);
+            //throw new NotImplementedException();
         }
 
         private void Sheet1_Shutdown(object sender, System.EventArgs e)
@@ -30,11 +38,17 @@ namespace CMMConfiguration
         /// </summary>
         private void InternalStartup()
         {
-            this.Startup += new System.EventHandler(Sheet1_Startup);
-            this.Shutdown += new System.EventHandler(Sheet1_Shutdown);
+            this.ActivateEvent += new Microsoft.Office.Interop.Excel.DocEvents_ActivateEventHandler(this.Sheet1_ActivateEvent);
+            this.Startup += new System.EventHandler(this.Sheet1_Startup);
+            this.Shutdown += new System.EventHandler(this.Sheet1_Shutdown);
+
         }
 
         #endregion
 
+        private void Sheet1_ActivateEvent()
+        {
+
+        }
     }
 }
