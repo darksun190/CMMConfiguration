@@ -13,9 +13,9 @@ namespace CMMConfiguration {
     
     
     /// 
-    [Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute(1)]
+    [Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute(2)]
     [global::System.Security.Permissions.PermissionSetAttribute(global::System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
-    public sealed partial class Sheet1 : Microsoft.Office.Tools.Excel.WorksheetBase {
+    public sealed partial class CMMTemplate : Microsoft.Office.Tools.Excel.WorksheetBase {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "15.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -23,8 +23,8 @@ namespace CMMConfiguration {
         /// 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Sheet1(global::Microsoft.Office.Tools.Excel.Factory factory, global::System.IServiceProvider serviceProvider) : 
-                base(factory, serviceProvider, "Sheet1", "Sheet1") {
+        public CMMTemplate(global::Microsoft.Office.Tools.Excel.Factory factory, global::System.IServiceProvider serviceProvider) : 
+                base(factory, serviceProvider, "Sheet2", "Sheet2") {
         }
         
         /// 
@@ -33,7 +33,7 @@ namespace CMMConfiguration {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void Initialize() {
             base.Initialize();
-            Globals.Sheet1 = this;
+            Globals.CMMTemplate = this;
             global::System.Windows.Forms.Application.EnableVisualStyles();
             this.InitializeCachedData();
             this.InitializeControls();
@@ -136,9 +136,6 @@ namespace CMMConfiguration {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "15.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeComponents() {
-            // 
-            // Sheet1
-            // 
         }
         
         /// 
@@ -151,15 +148,15 @@ namespace CMMConfiguration {
     
     internal sealed partial class Globals {
         
-        private static Sheet1 _Sheet1;
+        private static CMMTemplate _CMMTemplate;
         
-        internal static Sheet1 Sheet1 {
+        internal static CMMTemplate CMMTemplate {
             get {
-                return _Sheet1;
+                return _CMMTemplate;
             }
             set {
-                if ((_Sheet1 == null)) {
-                    _Sheet1 = value;
+                if ((_CMMTemplate == null)) {
+                    _CMMTemplate = value;
                 }
                 else {
                     throw new System.NotSupportedException();

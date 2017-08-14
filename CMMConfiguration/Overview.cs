@@ -12,7 +12,7 @@ using Office = Microsoft.Office.Core;
 
 namespace CMMConfiguration
 {
-    public partial class Sheet1
+    public partial class Overview
     {
         private void Sheet1_Startup(object sender, System.EventArgs e)
         {
@@ -20,9 +20,11 @@ namespace CMMConfiguration
             
         }
 
-        private void Variable_VariableChanged(object sender, VariableChangedEventArgs e)
+        private void Variable_VariableChanged(object sender, EventArgs e)
         {
+            this.Unprotect();
             this.get_Range("A1").Value2 = string.Format("{0} - {1}", "Project Overview", Variable.Project_Name);
+            this.Protect();
             //throw new NotImplementedException();
         }
 

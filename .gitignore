@@ -259,3 +259,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/CMMConfiguration/template/Cost Calculation _Project SGM Wuhan SGE P3.xls
+/CMMConfiguration/template/Project calculation SGM Wuhan_GFE-20160902.xls

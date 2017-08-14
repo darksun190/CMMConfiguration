@@ -6,16 +6,17 @@ using Office = Microsoft.Office.Core;
 
 namespace CMMConfiguration
 {
-    partial class OverviewActionsPaneControl1 : UserControl
+    partial class OverviewActionsPaneContro : UserControl
     {
-        public OverviewActionsPaneControl1()
+        public OverviewActionsPaneContro()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            Variable.Project_Name = textBox1.Text;
+
         }
     }
 }

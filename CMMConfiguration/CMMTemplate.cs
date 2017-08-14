@@ -12,15 +12,13 @@ using Office = Microsoft.Office.Core;
 
 namespace CMMConfiguration
 {
-    public partial class ThisWorkbook
+    public partial class CMMTemplate
     {
-        private void ThisWorkbook_Startup(object sender, System.EventArgs e)
+        private void Sheet2_Startup(object sender, System.EventArgs e)
         {
-            OverviewActionsPaneContro apc1 = new OverviewActionsPaneContro();
-            this.ActionsPane.Controls.Add(apc1);
         }
 
-        private void ThisWorkbook_Shutdown(object sender, System.EventArgs e)
+        private void Sheet2_Shutdown(object sender, System.EventArgs e)
         {
         }
 
@@ -32,8 +30,8 @@ namespace CMMConfiguration
         /// </summary>
         private void InternalStartup()
         {
-            this.Startup += new System.EventHandler(ThisWorkbook_Startup);
-            this.Shutdown += new System.EventHandler(ThisWorkbook_Shutdown);
+            this.Startup += new System.EventHandler(Sheet2_Startup);
+            this.Shutdown += new System.EventHandler(Sheet2_Shutdown);
         }
 
         #endregion
