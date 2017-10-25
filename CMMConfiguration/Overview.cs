@@ -16,16 +16,7 @@ namespace CMMConfiguration
     {
         private void Sheet1_Startup(object sender, System.EventArgs e)
         {
-            Variable.VariableChanged += Variable_VariableChanged;
-            
-        }
 
-        private void Variable_VariableChanged(object sender, EventArgs e)
-        {
-            this.Unprotect();
-            this.get_Range("A1").Value2 = string.Format("{0} - {1}", "Project Overview", Variable.Project_Name);
-            this.Protect();
-            //throw new NotImplementedException();
         }
 
         private void Sheet1_Shutdown(object sender, System.EventArgs e)
@@ -50,6 +41,8 @@ namespace CMMConfiguration
 
         private void Sheet1_ActivateEvent()
         {
+            WorkbookBase wb = (WorkbookBase)this.Parent;
+            wb.ActionsPane.Controls[0].Show();
 
         }
     }

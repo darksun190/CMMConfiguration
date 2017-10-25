@@ -18,6 +18,7 @@ namespace CMMConfiguration
         {
             OverviewActionsPaneContro apc1 = new OverviewActionsPaneContro();
             this.ActionsPane.Controls.Add(apc1);
+            apc1.Hide();
         }
 
         private void ThisWorkbook_Shutdown(object sender, System.EventArgs e)

@@ -30,11 +30,19 @@ namespace CMMConfiguration
         /// </summary>
         private void InternalStartup()
         {
-            this.Startup += new System.EventHandler(Sheet2_Startup);
-            this.Shutdown += new System.EventHandler(Sheet2_Shutdown);
+            this.ActivateEvent += new Microsoft.Office.Interop.Excel.DocEvents_ActivateEventHandler(this.CMMTemplate_ActivateEvent);
+            this.Startup += new System.EventHandler(this.Sheet2_Startup);
+            this.Shutdown += new System.EventHandler(this.Sheet2_Shutdown);
+
         }
 
         #endregion
 
+        private void CMMTemplate_ActivateEvent()
+        {
+            var wb = Parent as ThisWorkbook;
+            wb.ActionsPane.Controls[0].Hide();
+
+        }
     }
 }

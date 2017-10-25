@@ -91,6 +91,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateLevel\ConfigurationDate.cs" />
+    <Compile Include="DateLevel\GroupDate.cs" />
+    <Compile Include="DateLevel\ItemDate.cs" />
+    <Compile Include="DateLevel\SummaryDate.cs" />
+    <Compile Include="DateLevel\WorkbookDate.cs" />
     <Compile Include="DiscountRate.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,7 +127,6 @@
     <Compile Include="ThisWorkbook.Designer.cs">
       <DependentUpon>ThisWorkbook.Designer.xml</DependentUpon>
     </Compile>
-    <Compile Include="Variable.cs" />
     <EmbeddedResource Include="DiscountRate.resx">
       <DependentUpon>DiscountRate.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +171,10 @@
       <DependentUpon>CMMTemplate.cs</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ControlLevel\" />
+    <Folder Include="ViewLevel\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -185,10 +193,10 @@
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
-        <ProjectProperties HostName="CMMConfiguration.xlsx" HostPackage="{3F2B7691-D1D1-402F-9370-2704A737CF60}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="XLS" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files (x86)\Microsoft Office\root\Office16\Excel.exe" DebugInfoCommandLine="/x &quot;[$OUTPUT]CMMConfiguration.xlsx&quot;" />
+        <ProjectProperties HostName="CMMConfiguration.xlsx" HostPackage="{3F2B7691-D1D1-402F-9370-2704A737CF60}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="XLS" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files (x86)\Microsoft Office\Office15\Excel.exe" DebugInfoCommandLine="/x &quot;[$OUTPUT]CMMConfiguration.xlsx&quot;" />
         <Host Name="Excel Document" Path=".\CMMConfiguration.xlsx" GeneratedCodeNamespace="CMMConfiguration">
-          <HostItem Name="Sheet1" Code="Overview.cs" CanonicalName="Sheet1" DisplayName="Overview" Blueprint="Overview.Designer.xml" GeneratedCode="Overview.Designer.cs" />
           <HostItem Name="Sheet2" Code="CMMTemplate.cs" CanonicalName="Sheet2" DisplayName="CMMTemplate" Blueprint="CMMTemplate.Designer.xml" GeneratedCode="CMMTemplate.Designer.cs" />
+          <HostItem Name="Sheet1" Code="Overview.cs" CanonicalName="Sheet1" DisplayName="Overview" Blueprint="Overview.Designer.xml" GeneratedCode="Overview.Designer.cs" />
           <HostItem Name="ThisWorkbook" Code="ThisWorkbook.cs" CanonicalName="ThisWorkbook" Blueprint="ThisWorkbook.Designer.xml" GeneratedCode="ThisWorkbook.Designer.cs" />
         </Host>
       </FlavorProperties>
