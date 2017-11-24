@@ -41,9 +41,7 @@ namespace CMMConfiguration
 
         private void Sheet1_ActivateEvent()
         {
-            WorkbookBase wb = (WorkbookBase)this.Parent;
-            wb.ActionsPane.Controls[0].Show();
-
+            Globals.ThisWorkbook.ActionsPane.Controls[0].Show();
         }
     }
 }

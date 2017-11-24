@@ -92,9 +92,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DateLevel\ConfigurationDate.cs" />
+    <Compile Include="DateLevel\DiscountRateDate.cs" />
     <Compile Include="DateLevel\GroupDate.cs" />
     <Compile Include="DateLevel\ItemDate.cs" />
-    <Compile Include="DateLevel\SummaryDate.cs" />
+    <Compile Include="DateLevel\OrderNumber.cs" />
+    <Compile Include="DateLevel\Unit.cs" />
     <Compile Include="DateLevel\WorkbookDate.cs" />
     <Compile Include="DiscountRate.cs">
       <SubType>UserControl</SubType>

@@ -40,9 +40,7 @@ namespace CMMConfiguration
 
         private void CMMTemplate_ActivateEvent()
         {
-            var wb = Parent as ThisWorkbook;
-            wb.ActionsPane.Controls[0].Hide();
-
+            Globals.ThisWorkbook.ActionsPane.Controls[0].Hide();
         }
     }
 }

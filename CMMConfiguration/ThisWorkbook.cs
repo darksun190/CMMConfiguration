@@ -16,9 +16,21 @@ namespace CMMConfiguration
     {
         private void ThisWorkbook_Startup(object sender, System.EventArgs e)
         {
-            OverviewActionsPaneContro apc1 = new OverviewActionsPaneContro();
-            this.ActionsPane.Controls.Add(apc1);
-            apc1.Hide();
+            //整个流程从这里开始
+
+            //如果是第一次打开，建立一个新的报价
+            if(DateLevel.WorkbookDate.firstRun )
+            {
+
+            }
+            //是一个旧报价，需要打开修改
+            else
+            {
+
+            }
+            //OverviewActionsPaneContro apc1 = new OverviewActionsPaneContro();
+            //apc1.Name = "global";
+            //Globals.ThisWorkbook.ActionsPane.Controls.Add(apc1);
         }
 
         private void ThisWorkbook_Shutdown(object sender, System.EventArgs e)
